@@ -1,8 +1,9 @@
 # Danielfm's ErgoDox Layout
 
-This is the QMK-based layout I'm currently using for Ergodox EZ, which was
+This is the [QMK](https://github.com/qmk/qmk_firmware)-based layout I'm
+currently using for [Ergodox EZ](https://ergodox-ez.com), which was
 heavily customized to improve comfort while using Emacs and other
-applications that rely heavily on modifier keys, such as Ctrl and Alt.
+applications that rely heavily on modifier keys, such as `Ctrl` and `Alt`.
 
 I'm still not quite finished, so expect more fundamental changes to this layout
 as I gather more information about my current usage.
@@ -16,7 +17,7 @@ as I gather more information about my current usage.
 ### Base Layer
 
 It's basically a QUERTY layout with some changes designed to eliminate the
-usage of the pinky finger for hitting modifier keys, resulting in reduced
+load on the pinky fingers for hitting modifier keys, resulting in reduced
 tension while typing a large sequence of modified keys, which is somewhat
 common in Emacs.
 
@@ -27,17 +28,17 @@ Some of the changes that is worth mentioning in more details:
   is also reflected in the LEDs: the light intensity is low when the keys are in
   one-shot state, or high when locked (tap the modifiers 3 times to lock).
 - As I spend most of the time typing inside Emacs, I moved the `Ctrl` and
-  Alt modifiers from the [pinkies](http://ergoemacs.org/emacs/emacs_pinky.html)
+  Alt modifiers from the [pinky](http://ergoemacs.org/emacs/emacs_pinky.html)
   to the thumbs. The `Space` key, when held, act as `Ctrl`, making these keys
-  easily accessible from both hands, depending on the keystroke being executed
-  (for instance, `C-a` and `C-e` use the right-hand Ctrl, while `C-p` and `C-n`
+  easily accessible from both hands, depending on the keystroke being executed;
+  for instance, `C-a` and `C-e` use the right-hand Ctrl, while `C-p` and `C-n`
   use the left-hand Ctrl. I also apply this principle for other shortcuts in
-  order to minimze the hand gymnastics necessary for common key combinations).
-- The `Shift` key is also present in the right-hand thumb cluster in the same
-  location, and can be activated by long-pressing the `Enter` key. This makes it
-  easy on the muscle memory when typing sequences of shifted characters with
-  the hand opposite to where the character is located, in the same way as the
-  `Ctrl` usage explained earlier.
+  order to minimize the hand gymnastics necessary for common key combinations.
+- The `Shift` key is also mirrored in both sides of the board. On the right
+  side, it can be activated by long-pressing the `Enter` key. This makes it easy
+  on the muscle memory when typing sequences of shifted characters with the hand
+  opposite to where the character is located, in the same way as the `Ctrl`
+  usage explained earlier.
 - Another highly used key, `Command`, was moved to the bottom left and right
   keys of the board, which might seem counterintuitive due to those keys being
   too far to rich, but the idea is to press those keys with my palms, instead of
@@ -62,7 +63,7 @@ thing here is the use of tap dance for the `Page Up`/`Page Down` and
 
 To build it, you will need the [QMK](https://github.com/qmk/qmk_firmware)
 firmware checked out, and this repo either checked out to something like
-`layouts/community/danielfm`, or symlinked there.
+`layouts/community/ergodox/danielfm`, or symlinked there.
 
 One way to achieve that is this:
 
