@@ -23,10 +23,16 @@ common in Emacs.
 
 Some of the changes that is worth mentioning in more details:
 
+- To avoid having to `Shift` keys frequently, I enabled the QMK
+  [Auto Shift](https://docs.qmk.fm/#/feature_auto_shift) feature for symbols
+  and numbers. I did not enable it for alphanumeric keys since I like to be able
+  to press repeated letters just by holding the key.
 - `Shift`, `Ctrl` and `Alt` modifiers are mapped to the three LED lights at the
-  top of the board. These keys also act as one-shot modifiers, and their state
-  is also reflected in the LEDs: the light intensity is low when the keys are in
-  one-shot state, or high when locked (tap the modifiers 3 times to lock).
+  top of the board. These keys also act as
+  [one-shot modifiers](https://docs.qmk.fm/#/feature_advanced_keycodes?id=one-shot-keys),
+  and their state is also reflected in the LEDs: the light intensity is low when
+  the keys are in one-shot state, or high when locked (tap the modifiers 3 times
+  to lock).
 - As I spend most of the time typing inside Emacs, I moved the `Ctrl` and
   Alt modifiers from the [pinky](http://ergoemacs.org/emacs/emacs_pinky.html)
   to the thumbs. The `Space` key, when held, act as `Ctrl`, making these keys
