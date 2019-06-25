@@ -1,7 +1,7 @@
 # Danielfm's ErgoDox Layout
 
 This is the [QMK](https://github.com/qmk/qmk_firmware)-based layout I'm
-currently using for [Ergodox EZ](https://ergodox-ez.com), which was
+currently using for [ErgoDox EZ](https://ergodox-ez.com), which was
 heavily customized to improve comfort while using Emacs and other
 applications that rely heavily on modifier keys, such as `Ctrl` and `Alt`.
 
@@ -50,7 +50,7 @@ Some of the changes that is worth mentioning in more details:
 
 ### Symbols Layer
 
-This layer is mostly the same as the default Ergodox EZ.
+This layer is mostly the same as the default ErgoDox EZ.
 
 ### Media and Navigation Layer
 
