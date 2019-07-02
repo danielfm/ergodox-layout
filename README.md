@@ -23,7 +23,8 @@ common in Emacs.
 
 Some of the changes that is worth mentioning in more details:
 
-- To avoid having to `Shift` keys frequently, I enabled the QMK
+- To avoid having to `Shift` keys frequently to type accents, such as `!`, `#`,
+  and similar symbols, I enabled the QMK
   [Auto Shift](https://docs.qmk.fm/#/feature_auto_shift) feature for symbols
   and numbers. I did not enable it for alphanumeric keys since I like to be able
   to press repeated letters just by holding the key.
