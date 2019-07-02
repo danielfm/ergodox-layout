@@ -223,6 +223,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         rgblight_mode(1);
         return false;
 
+      case HSV_LGREEN:
+        rgblight_mode(1);
+        rgblight_sethsv(120, 255, 255);
+        return false;
+
       case HSV_LBLUE:
         rgblight_mode(1);
         rgblight_sethsv(172, 255, 255);
