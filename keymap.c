@@ -8,6 +8,8 @@
 enum custom_keycodes {
   RGB_SLD = SAFE_RANGE,
   EPRM,
+  RGB_ON,
+  RGB_OFF,
   HSV_LBLUE,
   HSV_LGREEN,
   HSV_LWHITE
@@ -96,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |       |      |      |      |      |                                       |      |    . |   0  |   =  |      |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |Animat| Blue |       |Toggle|Solid |
+ *                                        |Animat| Blue |       |  Off |  On  |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |Bright|Bright| Green|       | Sat+ |Hue-  |Hue+  |
  *                                 |ness- |ness+ |------|       |------|      |      |
@@ -120,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            KC_TRNS, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_TRNS,
   KC_TRNS, KC_AMPR, KC_1,    KC_2,    KC_3,    KC_BSLS, KC_TRNS,
                     KC_TRNS, KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
-  RGB_TOG, RGB_SLD,
+  RGB_OFF, RGB_ON,
   RGB_SAI,
   RGB_SAD, RGB_HUD, RGB_HUI
 ),
@@ -213,31 +215,46 @@ void matrix_scan_user(void) {
 
 // Implement custom keycodes.
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-    switch (keycode) {
-      case EPRM:
+  switch (keycode) {
+    case EPRM:
+      if (record->event.pressed) {
         eeconfig_init();
-        return false;
+      }
+      return false;
 
-      case RGB_SLD:
+    case RGB_OFF:
+      if (record->event.pressed) {
+        rgblight_mode(0);
+      }
+      return false;
+
+    case RGB_ON:
+      if (record->event.pressed) {
         rgblight_mode(1);
-        return false;
+      }
+      return false;
 
-      case HSV_LGREEN:
+    case HSV_LGREEN:
+      if (record->event.pressed) {
         rgblight_mode(1);
         rgblight_sethsv(120, 255, 255);
-        return false;
+      }
+      return false;
 
-      case HSV_LBLUE:
+    case HSV_LBLUE:
+      if (record->event.pressed) {
         rgblight_mode(1);
         rgblight_sethsv(172, 255, 255);
-        return false;
+      }
+      return false;
 
-      case HSV_LWHITE:
+    case HSV_LWHITE:
+      if (record->event.pressed) {
         rgblight_mode(1);
         rgblight_sethsv(0, 0, 255);
-        return false;
-    }
+      }
+      return false;
   }
+
   return true;
 }
