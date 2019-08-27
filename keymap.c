@@ -8,8 +8,6 @@
 enum custom_keycodes {
   RGB_SLD = SAFE_RANGE,
   EPRM,
-  RGB_ON,
-  RGB_OFF,
   HSV_LBLUE,
   HSV_LGREEN,
   HSV_LWHITE
@@ -91,14 +89,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * |         |   !  |   @  |   {  |   }  |   |  |      |           |      |      |   7  |   8  |   9  |   *  |   F12  |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |   #  |   $  |   (  |   )  |   `  |------|           |------|      |   4  |   5  |   6  |   +  |        |
+ * |         |   #  |   $  |   (  |   )  |   `  |------|           |------|      |   4  |   5  |   6  |   +  |  Enter |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   \  |        |
+ * |         |   %  |   ^  |   [  |   ]  |   ~  |      |           |      |   &  |   1  |   2  |   3  |   -  |        |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |       |      |      |      |      |                                       |      |    . |   0  |   =  |      |
+ *   |       |      |      |      |      |                                       |      |    . |   0  |   /  |   =  |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |Animat| Blue |       |  Off |  On  |
+ *                                        |Animat| Blue |       |  Tog |      |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |Bright|Bright| Green|       | Sat+ |Hue-  |Hue+  |
  *                                 |ness- |ness+ |------|       |------|      |      |
@@ -119,10 +117,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // right hand
   KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
   KC_TRNS, KC_TRNS, KC_7,    KC_8,    KC_9,    KC_ASTR, KC_F12,
-           KC_TRNS, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_TRNS,
-  KC_TRNS, KC_AMPR, KC_1,    KC_2,    KC_3,    KC_BSLS, KC_TRNS,
-                    KC_TRNS, KC_DOT,  KC_0,    KC_EQL,  KC_TRNS,
-  RGB_OFF, RGB_ON,
+           KC_TRNS, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_ENTER,
+  KC_TRNS, KC_AMPR, KC_1,    KC_2,    KC_3,    KC_MINS, KC_TRNS,
+                    KC_TRNS, KC_DOT,  KC_0,    KC_SLSH,  KC_EQL,
+  RGB_TOG, KC_TRNS,
   RGB_SAI,
   RGB_SAD, RGB_HUD, RGB_HUI
 ),
@@ -219,18 +217,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case EPRM:
       if (record->event.pressed) {
         eeconfig_init();
-      }
-      return false;
-
-    case RGB_OFF:
-      if (record->event.pressed) {
-        rgblight_mode(0);
-      }
-      return false;
-
-    case RGB_ON:
-      if (record->event.pressed) {
-        rgblight_mode(1);
       }
       return false;
 
