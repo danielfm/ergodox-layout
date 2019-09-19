@@ -54,11 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   | LGUI | Left | Down |  '"  |  `~  |                                       |   [  |   ]  |  Up  | Right| LGUI |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  Del |      |       |      |      |
+ *                                        |  Del | RGUI |       | RGUI |      |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
  *                                 |LCtrl | Shift|------|       |------|Enter/|Space/|
- *                                 |      |      |  Alt |       | Alt  |Shift |LCtrl |
+ *                                 |      |      | LAlt |       | LAlt |Shift |LCtrl |
  *                                 `--------------------'       `--------------------'
  */
 [BASE] = LAYOUT_ergodox(
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_BSPC,  KC_A,    KC_S,    KC_D,    KC_F,   KC_G,
         MO(SYMB), KC_Z,    KC_X,    KC_C,    KC_V,   KC_B, KC_PIPE,
         KC_LGUI,  KC_LEFT, KC_DOWN, KC_QUOT, KC_GRV,
-                                                  KC_DELT, KC_TRNS,
+                                                  KC_DELT, KC_RGUI,
                                                            KC_TRNS,
                        OSM(MOD_LCTL), OSM(MOD_LSFT), OSM(MOD_LALT),
         // right hand
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     KC_H, KC_J,    KC_K,    KC_L,    LT(NAV, KC_SCLN), KC_QUOT,
         KC_UNDS,    KC_N, KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          TG(SYMB),
                           KC_LBRC, KC_RBRC, KC_UP,   KC_RGHT,          KC_LGUI,
-        KC_TRNS, KC_TRNS,
+        KC_RGUI, KC_TRNS,
         KC_TRNS,
         OSM(MOD_LALT), LSFT_T(KC_ENTER), LCTL_T(KC_SPC)
     ),

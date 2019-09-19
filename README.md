@@ -8,9 +8,8 @@ applications that rely heavily on modifier keys, such as `Ctrl` and `Alt`.
 I'm still not quite finished, so expect more fundamental changes to this layout
 as I gather more information about my current usage.
 
-<a href="http://www.keyboard-layout-editor.com/#/gists/ebf52ba3338c94f3698851e9244b6b05">
-  <img src="./img/layout.png"/>
-</a>
+See this layout in
+[keyboard-layout-editor.com](http://www.keyboard-layout-editor.com/#/gists/ebf52ba3338c94f3698851e9244b6b05).
 
 ## Layers
 
