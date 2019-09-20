@@ -34,7 +34,7 @@ Some of the changes that is worth mentioning in more details:
   the keys are in one-shot state, or high when locked (tap the modifiers 3 times
   to lock).
 - As I spend most of the time typing inside Emacs, I moved the `Ctrl` and
-  Alt modifiers from the [pinky](http://ergoemacs.org/emacs/emacs_pinky.html)
+  `Alt` modifiers from the [pinky](http://ergoemacs.org/emacs/emacs_pinky.html)
   to the thumbs. The `Space` key, when held, act as `Ctrl`, making these keys
   easily accessible from both hands, depending on the keystroke being executed;
   for instance, `C-a` and `C-e` use the right-hand Ctrl, while `C-p` and `C-n`
