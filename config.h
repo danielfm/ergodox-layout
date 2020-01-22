@@ -2,9 +2,10 @@
 #define CONFIG_USER_H
 
 // Should fix issues with duplicate keys being emitted by mistake
-#define DEBOUNCE 15
+#undef  DEBOUNCE
+#define DEBOUNCE 20
 
-#define AUTO_SHIFT_TIMEOUT 150
+#define AUTO_SHIFT_TIMEOUT 140
 #define NO_AUTO_SHIFT_ALPHA
 
 #define ONESHOT_TAP_TOGGLE 3
