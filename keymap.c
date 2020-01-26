@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      |  Up  |      |      | PgUp |           |      |      | Btn1 |MouseU| Btn2 |      |        |
+ * |        |      |      |  Up  |      |      | PgUp |           |      |      |      |MouseU|      |      |        |
  * |--------+------+------+------+------+------| Home |           |      |------+------+------+------+------+--------|
  * |        |      | Left | Down | Right|      |------|           |------|      |MouseL|MouseD|MouseR|      |        |
  * |--------+------+------+------+------+------| PgDn |           |      |------+------+------+------+------+--------|
@@ -134,9 +134,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      |      |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |      |
- *                                 |      |      |------|       |------| Prev | Play |
- *                                 |      |      |      |       |      | Next |      |
+ *                                 | Mouse| Mouse|      |       |      |      |      |
+ *                                 |  Left| Right|------|       |------| Prev | Play |
+ *                                 |   Btn|   Btn|      |       |      | Next |      |
  *                                 `--------------------'       `--------------------'
  */
 [NAV] = LAYOUT_ergodox(
@@ -148,10 +148,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                                                        KC_TRNS,  KC_TRNS,
                                                                  KC_TRNS,
-                                               KC_TRNS, KC_TRNS, KC_TRNS,
+                                               KC_BTN1, KC_BTN2, KC_TRNS,
        // right hand
        KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_BTN1, KC_MS_U, KC_BTN2, KC_TRNS, KC_TRNS,
+       KC_TRNS,  KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
                  KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS,
        KC_TRNS,  KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS,
                           KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
