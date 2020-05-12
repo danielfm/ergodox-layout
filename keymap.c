@@ -41,13 +41,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |   Tab  |   Q  |   W  |   E  |   R  |   T  |   (  |           |  )   |   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |  Bksp  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  | ;/L2 |   '    |
- * |--------+------+------+------+------+------|   |  |           |  _   |------+------+------+------+------+--------|
+ * |--------+------+------+------+------+------|   ~  |           |  ç   |------+------+------+------+------+--------|
  * |  MO L1 |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  | MO L1  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LGUI |   '  | Left | Right|   [  |                                       |   ]  |  Up  | Down |   `  | LGUI |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |  Del |  `   |       |   ~  |   ç  |
+ *                                        |  Del |  Meh |       |  Meh | Bksp |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | RAlt |       | RAlt |      |      |
  *                                 |LCtrl |LShift|------|       |------|Enter/|Space/|
@@ -59,19 +59,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,   KC_5, KC_EQL,
         KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,   KC_T, KC_LPRN,
         KC_BSPC,  KC_A,    KC_S,    KC_D,    KC_F,   KC_G,
-        MO(SYMB), KC_Z,    KC_X,    KC_C,    KC_V,   KC_B, KC_PIPE,
+        MO(SYMB), KC_Z,    KC_X,    KC_C,    KC_V,   KC_B, KC_TILD,
         KC_LGUI,  KC_QUOT, KC_LEFT, KC_RGHT, KC_LBRC,
-                                                  KC_DELT, KC_GRV,
-                                                     OSM(MOD_RALT),
+                                                  KC_DELT, KC_MEH,
+                                                           KC_RALT,
                        OSM(MOD_LCTL), OSM(MOD_LSFT), OSM(MOD_LALT),
         // right hand
-        KC_EQL,  KC_6, KC_7,    KC_8,    KC_9,    KC_0,             KC_MINS,
-        KC_RPRN, KC_Y, KC_U,    KC_I,    KC_O,    KC_P,             KC_BSLS,
-                 KC_H, KC_J,    KC_K,    KC_L,    LT(NAV, KC_SCLN), KC_QUOT,
-        KC_UNDS, KC_N, KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          MO(SYMB),
-                       KC_RBRC, KC_UP,   KC_DOWN, KC_GRV,           KC_LGUI,
-        KC_TILD, RALT(KC_COMM),
-        OSM(MOD_RALT),
+        KC_EQL,        KC_6, KC_7,    KC_8,    KC_9,    KC_0,             KC_MINS,
+        KC_RPRN,       KC_Y, KC_U,    KC_I,    KC_O,    KC_P,             KC_BSLS,
+                       KC_H, KC_J,    KC_K,    KC_L,    LT(NAV, KC_SCLN), KC_QUOT,
+        RALT(KC_COMM), KC_N, KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          MO(SYMB),
+                             KC_RBRC, KC_UP,   KC_DOWN, KC_GRV,           KC_LGUI,
+        KC_MEH, KC_BSPC,
+        KC_RALT,
         OSM(MOD_LALT), RSFT_T(KC_ENTER), LCTL_T(KC_SPC)
     ),
 

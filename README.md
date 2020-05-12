@@ -48,8 +48,7 @@ Some of the changes that is worth mentioning in more details:
   using my fingers.
 - Since I write software in bash and C-like languages in my daily job, I need
   easy access to keys such as brackets, curly braces and parens (the two inner
-  keys at the center-top, tap once for `[` and `]`, twice for `(` and `)`), as
-  well as pipes and underscores (the two inner keys at the center-bottom).
+  keys at the center-top, tap once for `[` and `]`, twice for `(` and `)`).
 
 ### Symbols Layer
 
